@@ -1,0 +1,33 @@
+﻿@model FamilyDirectory.web.Models.AddEditVM
+@{
+    ViewBag.Title = "Add Family Member";
+}
+<body background="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-xpf1/t1.0-9/10169341_10203135297199036_3514688134884225753_n.jpg">
+
+    <h1><font color="violetblue">Please add the family member by filling in the form below!</font></h1>
+    <form method="post">
+        <font style="color: cornflowerblue; font-size: 1.5em;" />
+        <h2>Enter First Name</h2>
+        @Html.EditorFor(x => x.Person.FirstName)
+       <h2>Enter Last Name</h2>
+        @Html.EditorFor(x => x.Person.LastName)
+        <h2>Enter Picture URL</h2>
+        @Html.EditorFor(x => x.Person.Picture)
+        <h2>Enter Birthday</h2>
+        @Html.EditorFor(x => x.Person.Birthday)
+        <h2>Enter Biography</h2>
+
+        @Html.EditorFor(x => x.Person.Bio)<br />
+        <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />
+    </form>
+    @if (Model.ButtonMessage == "Submit Changes")
+    {
+        <form method="post">
+            <input class="btn btn-danger" type="submit" value="Delete" />
+            <a href="/Home/AddPerson" class="btn btn-danger"><span class="glyphicon glyphicon-user"></span> Add a Person!</a>
+
+
+        </form>
+    }
+</body>
+<a href="/Home/AddPerson"></a>

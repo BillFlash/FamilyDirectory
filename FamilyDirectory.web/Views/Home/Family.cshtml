@@ -1,0 +1,26 @@
+﻿@model List<data.models.Family>
+
+<header><h1><font color="Chartreuse">Family</font></h1></header>
+
+<a href="/Home/AddFamily" class="btn btn-danger"><span class="glyphicon glyphicon-star"></span> Add your Family!</a>
+    <a href="/Home/AddPerson" class="btn btn-success"><span class="glyphicon glyphicon-heart"></span> Add a Person</a>
+
+<body background="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfa1/t1.0-9/531190_397976100261645_1903962097_n.jpg">
+    <div class=" table-responsive">
+        <table class="table table-hover table-bordered">
+            <tr>
+                <th><h1><font color="cyan">Name</font></h1></th>
+                <th><h1><font color="cyan">Picture</font></h1></th>
+            </tr>
+            @foreach (var temp in Model)
+            {
+                <tr>
+                    <td><font color="Chartreuse" size="6">@temp.NameOfFamily<a href="/Home/Family/@temp.Id" class="btn btn-danger">Delete</a></font></td>
+                    <td><img src="@temp.FamilyCrest" alt="Pic of family crest" height="200" width="200" /></td>
+                </tr>
+            }
+        </table>
+    </div>
+    <a href="/Home/Family"></a>
+</body>
+

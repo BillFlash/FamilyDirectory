@@ -1,0 +1,36 @@
+﻿@model List<data.models.Person>
+
+<header><h1><font color="Green">Mi Familia</font></h1></header>
+
+<a href="/Home/AddPerson" class="btn btn-danger"><span class="glyphicon glyphicon-star"></span> Add a Person!</a>
+<a href="/Home/AddFamily" class="btn btn-success"><span class="glyphicon glyphicon-heart"></span> Add a Family</a>
+
+<body background="http://animal-backgrounds.com/download/516/1920x1080/crop/large-shark-hunting-ocean-kayaker-background-wallpaper-1920x1080.jpg">
+
+
+    <div class=" table table-responsive">
+
+        <table class="table-bordered">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Picture</th>
+                <th>Birthday</th>
+            </tr>
+            @foreach (var temp in Model)
+            {
+                <tr>
+                    <td><font color="blue" size="6">@temp.FirstName<br/><a href="/Home/DeletePerson/@temp.Id" class="btn btn-danger">Delete</a></font></td>
+                    <td><font color="blue" size="6">@temp.LastName</font></td>
+                    <td><a href="/Home/PersonDetail/@temp.Id"><img src="@temp.Picture" alt="Picture of family member" height="400" width="400"></a></td>
+                    <td><font color="darkred" size="6">@temp.Birthday</font></td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+
+
+
+
+
