@@ -12,7 +12,7 @@ namespace FamilyDirectory.web.Adapters.Interfaces
         List<Person> GetListPerson();
         List<Family> GetListFamily();
         Person GetPerson(int id);
-        //Person GetPersonByName(int id);//I might be duplicating what is above?
+        Person GetPersonByName(string person);//I might be duplicating what is above?
         void AddPerson(Person Person);
         void DeletePerson(int id);
         void EditPerson(Person Person);

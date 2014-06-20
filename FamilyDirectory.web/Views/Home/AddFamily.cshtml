@@ -1,12 +1,13 @@
 ﻿@model FamilyDirectory.web.Models.AddEditVM
 
 <body background="https://scontent-b-sea.xx.fbcdn.net/hphotos-xpf1/t1.0-9/1891075_10202889858623225_1318675089_n.jpg">
-    <h2><font color="Chartreuse">Please add your Family below</font></h2>
+    <h2><font color="Chartreuse">Please add your Family by filling in the form below!</font></h2>
     <form method="post">
-        <h1><font color="red">Enter The Last Name of your family</font></h1><br />
+        <font style="color: cornflowerblue; font-size: 1.5em;" />
+        <h1>Enter The Last Name of your family</h1>
         @Html.EditorFor(x => x.Family.NameOfFamily)
-        <h1><font color="red">Enter Picture of Family Crest as a URL</font></h1><br />
-        @Html.EditorFor(x => x.Family.FamilyCrest)
+        <h1>Enter Picture of your Family Crest as a URL</h1>
+        @Html.EditorFor(x => x.Family.FamilyCrest)<br /><br />
        
         <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />
     </form>

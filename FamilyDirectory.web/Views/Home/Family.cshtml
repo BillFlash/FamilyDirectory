@@ -15,8 +15,10 @@
             @foreach (var temp in Model)
             {
                 <tr>
-                    <td><font color="Chartreuse" size="6">@temp.NameOfFamily<a href="/Home/Family/@temp.Id" class="btn btn-danger">Delete</a></font></td>
-                    <td><img src="@temp.FamilyCrest" alt="Pic of family crest" height="200" width="200" /></td>
+                    <td><font color="Chartreuse" size="6">@temp.NameOfFamily<br />
+                        <a href="/Home/Family/@temp.Id" class="btn btn-danger">Delete</a>
+                        <a href="/Home/EditFamily/@temp.Id" class="btn btn-success">Edit</a></font></td>
+                    <td><a href="/Home/FamilyDetails/@temp.Id"><img src="@temp.FamilyCrest" alt="Pic of family crest" height="200" width="200" /></a></td>
                 </tr>
             }
         </table>

@@ -79,8 +79,8 @@ namespace FamilyDirectory.web.Adapters.DataAdapaters
             Person model;
             using(ApplicationDbContext db = new ApplicationDbContext())
            {
-                model = db.People.Include("People").Where(p => p.FirstName == person).FirstOrDefault();
-            };
+                model = db.People.Where(p => p.LastName == person).FirstOrDefault();
+           }
             return model;
         }
 

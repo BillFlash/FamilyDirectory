@@ -7,17 +7,17 @@
     <h1><font color="violetblue">Please add the family member by filling in the form below!</font></h1>
     <form method="post">
         <font style="color: cornflowerblue; font-size: 1.5em;" />
-        <h2>Enter First Name</h2>
+        <h1>Enter First Name</h1>
         @Html.EditorFor(x => x.Person.FirstName)
-       <h2>Enter Last Name</h2>
+       <h1>Enter Last Name</h1>
         @Html.EditorFor(x => x.Person.LastName)
-        <h2>Enter Picture URL</h2>
+        <h1>Enter Picture URL</h1>
         @Html.EditorFor(x => x.Person.Picture)
-        <h2>Enter Birthday</h2>
+        <h1>Enter Birthday</h1>
         @Html.EditorFor(x => x.Person.Birthday)
-        <h2>Enter Biography</h2>
-
-        @Html.EditorFor(x => x.Person.Bio)<br />
+        <h1>Enter Biography</h1>
+        @Html.TextAreaFor(x => x.Person.Bio, 5, 125, null)<br /><br />
+        
         <input class="btn btn-success" type="submit" value="@Model.ButtonMessage" />
     </form>
     @if (Model.ButtonMessage == "Submit Changes")

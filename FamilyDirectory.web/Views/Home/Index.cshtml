@@ -14,13 +14,16 @@
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>Picture</th>
+                <th>Picture (Click Picture for Bio)</th>
                 <th>Birthday</th>
             </tr>
             @foreach (var temp in Model)
             {
                 <tr>
-                    <td><font color="blue" size="6">@temp.FirstName<br/><a href="/Home/DeletePerson/@temp.Id" class="btn btn-danger">Delete</a></font></td>
+                    <td><font color="blue" size="6">@temp.FirstName<br/>
+                        <a href="/Home/DeletePerson/@temp.Id" class="btn btn-danger">Delete</a>
+                        <a href="/Home/EditPerson/@temp.Id" class="btn btn-success">Edit</a></font> 
+                    </td>
                     <td><font color="blue" size="6">@temp.LastName</font></td>
                     <td><a href="/Home/PersonDetail/@temp.Id"><img src="@temp.Picture" alt="Picture of family member" height="400" width="400"></a></td>
                     <td><font color="darkred" size="6">@temp.Birthday</font></td>

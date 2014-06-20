@@ -14,13 +14,17 @@
                 <th>Picture</th>
                 <th>Birthday</th>
             </tr>
-            @foreach(var temp in Model)
-            <tr>
-                <td><font color="blue" size="6">@temp.FirstName</font></td>
-                @*<td><font color="blue" size="6">@temp.LastName</font></td>
-                <td><a href="/Home/PersonDetail/Id"><img src="@temp.Picture" alt="Picture of family member" height="400" width="400"></a></td>
-                <td><font color="darkred"><font size="6">@temp.Birthday</font></font></td>*@
-            </tr>
+         
+            @foreach (var temp in Model)
+            {
+                <tr>
+                    <td><font color="blue" size="6">@temp.FirstName</font></td>
+                    <td><font color="blue" size="6">@temp.LastName</font></td>
+                    <td><a href="/Home/PersonDetail/Id"><img src="@temp.Picture" alt="Picture of family member" height="400" width="400"></a></td>
+                    <td><font color="darkred"><font size="6">@temp.Birthday</font></font></td>
+                </tr>
+            }
+            
         </table>
     </div>
 </body>
